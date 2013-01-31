@@ -1,0 +1,14 @@
+﻿These two script can be used to clean up old machine accounts in Active Directory.
+
+You could run find_old_machines_by_lastlogon.ps1 which will disable machine accounts that are
+older than 21 days, but haven't booted on the network in the last 60 days.
+
+It will email the list of computers that are disabled. 
+
+You can then run Delete_disabled_computer_Accounts.ps1 at a later time to delete all disabled computer accounts.
+
+Im my scenario, I'd delete disabled accounts 30 days after they were disabled.
+
+A future version of this script had the ability to exclude machines based on a tag
+of some sort in the description field. I lost that version, but it would be easily implemented again.
+
